@@ -1,0 +1,17 @@
+node_modules/
+dist/
+build/
+*.log
+.env
+.DS_Store
+Thumbs.db
+*.tmp
+*.temp
+.git/
+.github/
+.hermes/
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
