@@ -1,0 +1,12 @@
+#!/bin/sh
+# runit service: /etc/sv/atur-saku/run
+# Supervise nginx sebagai long-running process.
+exec 2>&1
+mkdir -p /var/log/nginx /var/www/atur-saku
+# Ulangi nginx sampai berhasil
+while :; do
+  nginx
+  sleep 1
+  # Kalau nginx exit, runit akan restart otomatis
+  echo "$(date '+%H:%M:%S') nginx restart"
+done
